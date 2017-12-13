@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 //gang initiation connect yourself fool!
 connection.connect(function(err) {
     if (!err) {
-        console.log("we'z eating good " + "conneted as id " + connection.threadID);
+        console.log("we'z eating good " + "at table id " + connection.threadId);
     }
     else {
         console.log("hit the fan Charlie. " + "error connecting at: " + err.stack);

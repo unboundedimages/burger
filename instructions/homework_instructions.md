@@ -7,7 +7,7 @@ In this assignment, you'll create a burger logger with MySQL, Node, Express, Han
 
 ### Important
 
-Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHerokuDeploymentProcess.pdf) in order to deploy your assignment.
+Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHerokuDeploymentProcess.pdf) in ordenr to deploy your assignment.
 
 ### Before You Begin
 
@@ -31,7 +31,8 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 3. Install the Express npm package: `npm install express --save`.
 
-4. Create a server.js file.
+4. Create a
+5. ..js file.
 
 5. Install the Handlebars npm package: `npm install express-handlebars --save`.
 
@@ -64,7 +65,7 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
-5. Now you're going to run these SQL files. 
+5. Now you're going to run these SQL files.
 
    * Make sure you're in the `db` folder of your app.
 
@@ -92,9 +93,9 @@ Be sure to utilize the [MYSQL Heroku Deployment Guide](../Supplemental/MySQLHero
 
    * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
-     * `selectAll()` 
-     * `insertOne()` 
-     * `updateOne()` 
+     * `selectAll()`
+     * `insertOne()`
+     * `updateOne()`
 
    * Export the ORM object in `module.exports`.
 
@@ -148,7 +149,7 @@ All the recommended files and directories from the steps above should look like 
 ├── config
 │   ├── connection.js
 │   └── orm.js
-│ 
+│
 ├── controllers
 │   └── burgers_controller.js
 │
@@ -158,9 +159,9 @@ All the recommended files and directories from the steps above should look like 
 │
 ├── models
 │   └── burger.js
-│ 
+│
 ├── node_modules
-│ 
+│
 ├── package.json
 │
 ├── public
@@ -189,9 +190,9 @@ Attempt to complete homework assignment as described in instructions. If unable 
 
 ### Hosting on Heroku
 
-Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database. 
+Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database.
 
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details. 
+Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details.
 
 - - -
 
