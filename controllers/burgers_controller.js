@@ -16,3 +16,16 @@ router.get("/", function(req, res) {
 });
 //this portion creates. Post = create
 //
+router.post("burger/insertOne", function(req, res) {
+        burger.insertOne(["burger_name", "devoured"], [req.body.name, false],
+            function() {
+                res.direct("/index");
+            }
+        );
+
+    }
+
+);
+
+
+module.exports = router;
