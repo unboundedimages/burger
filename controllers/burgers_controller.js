@@ -26,6 +26,16 @@ router.post("burger/insertOne", function(req, res) {
     }
 
 );
+router.put("/burgers/updateOne/:id", function(req, res) {
+        var condition = "id = " + req.params.id;
+        console.log("under what condition ", condition);
+        burger.updateOne({ devoured: req.body.devoured }, condition, function() {
+            res.redirect("/index");
+        })
+
+    }
+
+)
 
 
 module.exports = router;
