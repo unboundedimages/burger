@@ -1,6 +1,6 @@
 body {
-    height: 150px;
-    width: 200px;
+    height: 720px;
+    width: auto;
     background: #07bafe;
     /* For browsers that do not support gradients */
     background: radial-gradient(yellow, #07bafe);
