@@ -6,7 +6,12 @@ var burger = require("../models/burger.js");
 //create the 'router' for the app and export the 'router' at the end of the file.
 // this portion goes out and listens for requests and retrieves the data
 //there may be a possible ayshncronys issue with this get****
-router.get("/", function(req, res) {
+
+
+
+///had to add the router.get above to stop throwing a type error. asynch issue was confirmed
+//it also did not like burgere.All and changed it to burger.selectAll on line 16
+router.get("/index", function(req, res) {
     burger.all(function(data) {
         var hbsObject = {
             burger: data
@@ -27,16 +32,13 @@ router.post("burger/insertOne", function(req, res) {
     }
 
 );
-router.put("/burgers/updateOne/:id", function(req, res) {
-        var condition = "id = " + req.params.id;
-        console.log("under what condition ", condition);
-        burger.updateOne({ devoured: req.body.devoured }, condition, function() {
-            res.redirect("/index");
-        })
-
-    }
-
-)
+router.put("/burger/updateOne/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+    console.log("under what condition ", condition);
+    burger.updateOne({ devoured: req.body.devoured }, condition, function() {
+        res.redirect("/index");
+    });
+});
 
 
 module.exports = router;
