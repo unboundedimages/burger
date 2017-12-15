@@ -47,7 +47,7 @@ function objToSql(ob) {
 
 var orm = {
     selectAll: function(maryPopdIn, cb) {
-        console.log("Selecting all products...\n");
+        console.log("Your burger is processing...\n");
         telephone.query("SELECT * FROM " + maryPopdIn, function(err, result) {
             if (err) { throw err; }
             cb(result);

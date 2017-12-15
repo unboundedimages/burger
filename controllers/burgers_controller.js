@@ -11,7 +11,7 @@ var burger = require("../models/burger.js");
 
 ///had to add the router.get above to stop throwing a type error. asynch issue was confirmed
 //it also did not like burgere.All and changed it to burger.selectAll on line 16
-router.get("/index", function(req, res) {
+router.get("/", function(req, res) {
     burger.all(function(data) {
         var hbsObject = {
             burger: data
@@ -22,10 +22,10 @@ router.get("/index", function(req, res) {
 });
 //this portion creates. Post = create
 //
-router.post("burger/insertOne", function(req, res) {
-        burger.insertOne(["burger_name", "devoured"], [req.body.name, false],
+router.post("/burger/insertOne", function(req, res) {
+        burger.create(["burger_name", "devoured"], [req.body.name, false],
             function() {
-                res.direct("/index");
+                res.redirect("/index");
             }
         );
 
