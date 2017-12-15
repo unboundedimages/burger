@@ -5,6 +5,7 @@ var burger = require("../models/burger.js");
 
 //create the 'router' for the app and export the 'router' at the end of the file.
 // this portion goes out and listens for requests and retrieves the data
+//there may be a possible ayshncronys issue with this get****
 router.get("/", function(req, res) {
     burger.all(function(data) {
         var hbsObject = {

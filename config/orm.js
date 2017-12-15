@@ -5,6 +5,8 @@ var telephone = require('../config/connection.js');
 // create the methods that will execute
 // the necessary MySQL commands in the controllers.function printQuestionMarks(num) {
 function printQuestionMarks(num) {
+
+    // Loop to build an array of [ ??? ]
     var arr = [];
 
     for (var i = 0; i < num; i++) {

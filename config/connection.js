@@ -1,5 +1,6 @@
 // source = https://codeforgeek.com/2015/01/nodejs-mysql-tutorial/
 // and the sienfield exercise from class
+// I still need to figure out JAW for heroku
 var express = require('express')
 var mysql = require('mysql');
 var app = express();

@@ -1,7 +1,7 @@
 //import orm.js into burger.js
 var orm = require("../config/orm.js");
 
-var callMe = {
+var callBacks = {
     all: function(cb) {
         orm.all("burger", function(res) {
             cb(res);
@@ -22,4 +22,4 @@ var callMe = {
 };
 
 //peace I'm out Exporting bye Felicia
-module.exportes = callMe;
+module.exportes = callBacks;
