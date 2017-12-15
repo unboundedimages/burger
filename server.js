@@ -4,7 +4,7 @@ var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 // var expressHB = require("express-handlebars")
 var app = express();
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 
 app.use(express.static("public"));
