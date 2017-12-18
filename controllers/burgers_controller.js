@@ -16,27 +16,30 @@ router.get("/", function(req, res) {
         var hbsObject = {
             burger: data
         };
-        console.log(hbsObject);
+        console.log("test: " + JSON.stringify(hbsObject));
         res.render("index", hbsObject);
     });
 });
 //this portion creates. Post = create
 //
 router.post("/burger/insertOne", function(req, res) {
-        burger.create(["burger_name", "devoured"], [req.body.name, false],
-            function() {
-                res.redirect("/index");
+        console.log(req.body);
+        burger.create(["burger_name", "devoured"], [req.body.burger_name, false],
+            function(hbsObject) {
+                console.log(hbsObject);
+                res.redirect("/");
             }
         );
 
     }
 
 );
-router.put("/burger/updateOne/:id", function(req, res) {
+router.get("/burger/updateOne/:id", function(req, res) {
     var condition = "id = " + req.params.id;
     console.log("under what condition ", condition);
-    burger.updateOne({ devoured: req.body.devoured }, condition, function() {
-        res.redirect("/index");
+    console.log(req.body);
+    burger.update({ devoured: true }, condition, function() {
+        res.redirect("/");
     });
 });
 

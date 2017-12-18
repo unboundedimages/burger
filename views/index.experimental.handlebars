@@ -37,8 +37,8 @@
 
 
 <div id="burgers-appear-hear">
-    {{!--burger/insertOne is pulling from line 25 on the burgers_controller.js--}}
-    <form action="burger/insertOne" method="POST" align="center">
+
+    <form action="burger/create" method="POST" align="center">
 
         <!-- Text Area Input -->
         <div class="row">
@@ -61,31 +61,7 @@
         </center>
 
     </form>
-    {{#each burger}}
-        {{#unless devoured}}
-            {{!--burger/updateOne is pulled from line 37 on the burgers_controller.js file in controllers--}}
-            <form action="burger/updateOne/{{id}}" method="GET">
-                <div class="input-group">
-                    <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
-                    <span class="input-group-btn">
-                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
-                </span>
-                </div>
-            </form>
-        {{/unless}}
-    {{/each}}
 
     <br>
-    {{#each burger}}
-        {{#if this.devoured}}
-            <form action="burger/updateOne/{{id}}" method="GET">
-                <div class="input-group">
-                    <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
-                    <span class="input-group-btn">
-                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
-                </span>
-                </div>
-            </form>
-        {{/if}}
-    {{/each}}
+
 </div>
